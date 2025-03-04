@@ -1,10 +1,10 @@
 <template>
   <div class="base-gif-form">
-    <Arco.Form :model="form" auto-label-width>
+    <Form :model="form" auto-label-width>
       <template v-for="item in config">
-        <Arco.FormItem :field="item.name" :label="item.label">
+        <FormItem :field="item.name" :label="item.label">
           <component
-            :is="Arco[item.component]"
+            :is="components[item.component]"
             v-model="form[item.name]"
             v-bind="{ ...item.props }"
           >
@@ -13,13 +13,13 @@
             </template>
           </component>
           <template #extra>{{ item.desc }}</template>
-        </Arco.FormItem>
+        </FormItem>
       </template>
-    </Arco.Form>
+    </Form>
   </div>
 </template>
 <script setup lang="ts">
-import * as Arco from '@arco-design/web-vue'
+import { Input, InputNumber, Form, FormItem } from '@arco-design/web-vue'
 import { computed } from 'vue'
 
 interface PropsType {
@@ -28,8 +28,13 @@ interface PropsType {
   modelValue: any
   config: any
 }
+
 const props = defineProps<PropsType>()
 
+const components: any = {
+  Input,
+  InputNumber,
+}
 const emit = defineEmits(['update:modelValue'])
 
 const form = computed({

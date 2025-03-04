@@ -8,13 +8,17 @@ import viteImagemin from 'vite-plugin-imagemin'
 
 export default defineConfig({
   base: './',
+  esbuild: {
+    pure: ['console.log'],
+    drop: ['debugger'],
+  },
   build: {
     outDir: './docs',
     sourcemap: false,
     rollupOptions: {
       output: {
-        chunkFileNames: 'js/[name]-[hash].js', // 引入文件名的名称
-        entryFileNames: 'js/[name]-[hash].js', // 包的入口文件名称
+        chunkFileNames: 'js/[name]-[hash].js',
+        entryFileNames: 'js/[name]-[hash].js',
         manualChunks(id) {
           if (id.includes('node_modules')) {
             return id
