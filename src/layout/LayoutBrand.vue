@@ -1,6 +1,6 @@
 <template>
   <div class="layout-brand">
-    <div class="layout-brand-logo"></div>
+    <img class="layout-brand-logo" src="/images/favicon.png" alt="logo" />
     <div class="layout-brand-title">Gif-Converter</div>
   </div>
 </template>
@@ -14,8 +14,6 @@
     width: 30px;
     height: 30px;
     margin-right: 4px;
-    background-image: url('@/assets/images/logo.png');
-    background-size: cover;
   }
   .layout-brand-title {
     font-family: DincorosBlack;
