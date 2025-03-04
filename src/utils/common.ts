@@ -1,6 +1,6 @@
 import { Modal, type ModalConfig } from '@arco-design/web-vue'
-import { h, ref } from 'vue'
-import { isFunction, map } from 'lodash'
+import { h } from 'vue'
+import { map } from 'lodash-es'
 
 export async function awaitDelay(promise: any, time = 500) {
   const start = new Date().getTime()

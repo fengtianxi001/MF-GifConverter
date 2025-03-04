@@ -6,7 +6,6 @@ import vueJsx from '@vitejs/plugin-vue-jsx'
 import stylelintPlugin from 'vite-plugin-stylelint'
 import viteImagemin from 'vite-plugin-imagemin'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   base: './',
   build: {
@@ -15,11 +14,8 @@ export default defineConfig({
       output: {
         chunkFileNames: 'js/[name]-[hash].js', // 引入文件名的名称
         entryFileNames: 'js/[name]-[hash].js', // 包的入口文件名称
-        assetFileNames: '[ext]/[name]-[hash].[ext]', // 资源文件像 字体，图片等
         manualChunks(id) {
-          if (id.includes('node_modules')) {
-            return 'vendor'
-          }
+          if (id.includes('node_modules')) return 'vendor'
         },
       },
     },
@@ -59,6 +55,9 @@ export default defineConfig({
   ],
   css: {
     preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler',
+      },
       less: {
         modifyVars: {
           'border-radius-small': '0px',
@@ -75,7 +74,7 @@ export default defineConfig({
   },
   server: {
     host: '0.0.0.0',
-    port: 8090,
+    port: 1124,
     open: true,
   },
 })

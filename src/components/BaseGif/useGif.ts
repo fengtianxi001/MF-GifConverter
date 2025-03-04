@@ -1,6 +1,6 @@
 import { Message } from '@arco-design/web-vue'
 import gifshot from 'gifshot'
-import { max } from 'lodash'
+import { max } from 'lodash-es'
 import { reactive, ref } from 'vue'
 
 type GifConfigType = {

@@ -29,6 +29,7 @@ import LayoutActions from './LayoutActions.vue'
 .layout {
   width: 100vw;
   height: 100vh;
+  font-family: SarasaMonoSC;
   .layout-header {
     display: flex;
     justify-content: space-between;

@@ -1,5 +1,5 @@
 import { ref } from 'vue'
-import { remove } from 'lodash'
+import { remove } from 'lodash-es'
 import { Message } from '@arco-design/web-vue'
 import { createBaseGifModal } from '@/components'
 import { FileUtils, VideoUtils, removeConfirm } from '@/utils'
