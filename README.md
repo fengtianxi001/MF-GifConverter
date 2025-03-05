@@ -2,7 +2,7 @@
 
 > 一个支持图片、视频、录像、录屏转 GIF 的在线程序
 
-> 服务地址 :https://fengtianxi001.github.io/MF-GifConverter
+> 服务地址 :https://mf-gifconverter.netlify.app/#/image
 
 <h1>
   <img src="https://github.com/fengtianxi001/MF-GifConverter/blob/master/screenshots/screenshot01.png?raw=true" title="screenshot">
