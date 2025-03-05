@@ -13,7 +13,7 @@ export default defineConfig({
     drop: ['debugger'],
   },
   build: {
-    outDir: './docs',
+    // outDir: './docs',
     sourcemap: false,
     rollupOptions: {
       output: {
